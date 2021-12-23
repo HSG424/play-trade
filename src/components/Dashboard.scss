@@ -122,10 +122,15 @@ table {
 }
 
 .search-button {
-  height: 48px;
   border-radius: 0;
-  padding-left: 21px;
-  padding-right: 21px;
+}
+
+@media only screen and (min-width: 768px) {
+  .search-button {
+    height: 48px;
+    padding-left: 21px;
+    padding-right: 21px;
+  }
 }
 
 .asset-h3 {
