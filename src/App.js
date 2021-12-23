@@ -1,14 +1,10 @@
-import { Fragment } from "react";
 import "./App.scss";
 
 import Login from "./components/Login.js";
+import Dashboard from "./components/Dashboard.js";
 
 function App() {
-  return (
-    <Fragment>
-      <Login />
-    </Fragment>
-  );
+  return <Dashboard />;
 }
 
 export default App;
