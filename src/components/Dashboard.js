@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import "./Dashboard.scss";
 import {
   Home,
@@ -15,6 +15,12 @@ import {
 import PieChart from "./PieChart";
 
 const Dashboard = () => {
+  const [showNav, setShowNav] = useState(false);
+
+  const naviShowHandler = () => {
+    setShowNav((prevState) => !prevState);
+  };
+
   return (
     <Fragment>
       {" "}
@@ -36,6 +42,7 @@ const Dashboard = () => {
           aria-controls="sidebarMenu"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={naviShowHandler}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -57,7 +64,9 @@ const Dashboard = () => {
         <div className="row">
           <nav
             id="sidebarMenu"
-            className="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+            className={`col-md-3 col-lg-2 d-md-block bg-light sidebar collapse ${
+              showNav && "show"
+            }`}
           >
             <div className="position-sticky pt-3">
               <ul className="nav flex-column">
