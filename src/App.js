@@ -1,10 +1,10 @@
 import "./App.scss";
 
-import Login from "./components/Login.js";
+import AuthForm from "./components/AuthForm.js";
 import Dashboard from "./components/Dashboard.js";
 
 function App() {
-  return <Dashboard />;
+  return <AuthForm />;
 }
 
 export default App;
