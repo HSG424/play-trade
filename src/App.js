@@ -1,10 +1,20 @@
+import { Switch, Route } from "react-router-dom";
 import "./App.scss";
 
-import AuthForm from "./components/AuthForm.js";
-import Dashboard from "./components/Dashboard.js";
+import AuthPage from "./pages/AuthPage";
+import HomePage from "./pages/HomePage";
 
 function App() {
-  return <AuthForm />;
+  return (
+    <Switch>
+      <Route path="/" exact>
+        <HomePage />
+      </Route>
+      <Route path="/auth">
+        <AuthPage />
+      </Route>
+    </Switch>
+  );
 }
 
 export default App;

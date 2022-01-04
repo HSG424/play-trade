@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import "./Dashboard.scss";
+import "./Overview.scss";
 import {
   Home,
   Briefcase,
@@ -14,7 +14,7 @@ import {
 
 import PieChart from "./PieChart";
 
-const Dashboard = () => {
+const Overview = () => {
   const [showNav, setShowNav] = useState(false);
 
   const naviShowHandler = () => {
@@ -73,13 +73,13 @@ const Dashboard = () => {
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="#">
                     <Home className="feather" />
-                    Dashboard
+                    Home
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">
                     <Briefcase className="feather" />
-                    Your Portfolio
+                    Portfolio
                   </a>
                 </li>
                 <li className="nav-item">
@@ -142,7 +142,7 @@ const Dashboard = () => {
           border-bottom
         "
             >
-              <h1 className="h2">Dashboard</h1>
+              <h1 className="h2">Home</h1>
             </div>
 
             <h3 className="asset-h3">Asset Breakdown</h3>
@@ -216,4 +216,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Overview;
