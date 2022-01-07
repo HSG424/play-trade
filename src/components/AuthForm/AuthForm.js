@@ -1,9 +1,9 @@
 import { useState, useContext } from "react";
 import "./AuthForm.scss";
-import AuthContext from "../store/auth-context";
-import logo from "../logo.png";
-import useHttp from "../hooks/use-http";
-import { FIREBASE_URL, FIREBASE_KEY } from "../config.js";
+import AuthContext from "../../store/auth-context";
+import logo from "../../logo.png";
+import useHttp from "../../hooks/use-http";
+import { FIREBASE_URL, FIREBASE_KEY } from "../../config.js";
 
 const AuthForm = () => {
   const authCtx = useContext(AuthContext);

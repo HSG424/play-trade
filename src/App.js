@@ -3,6 +3,7 @@ import "./App.scss";
 
 import AuthPage from "./pages/AuthPage";
 import HomePage from "./pages/HomePage";
+import SettingsPage from "./pages/SettingsPage";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       </Route>
       <Route path="/auth">
         <AuthPage />
+      </Route>
+      <Route path="/settings">
+        <SettingsPage />
       </Route>
     </Switch>
   );

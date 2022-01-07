@@ -1,7 +1,12 @@
-import Overview from "../components/Overview";
+import Layout from "../components/Layout/Layout";
+import Overview from "../components/Overview/Overview";
 
 const HomePage = () => {
-  return <Overview />;
+  return (
+    <Layout title="Home">
+      <Overview />
+    </Layout>
+  );
 };
 
 export default HomePage;
