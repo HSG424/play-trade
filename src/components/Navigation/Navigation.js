@@ -10,6 +10,7 @@ import {
   Settings,
   LogOut,
 } from "react-feather";
+import { NavLink } from "react-router-dom";
 
 const Navigation = (props) => {
   return (
@@ -22,59 +23,84 @@ const Navigation = (props) => {
       <div className="position-sticky pt-3">
         <ul className="nav flex-column">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">
+            <NavLink
+              className="nav-link"
+              activeClassName="active"
+              to="/"
+              exact={true}
+            >
               <Home className="feather" />
               Home
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink
+              className="nav-link"
+              activeClassName="active"
+              to="/portfolio"
+            >
               <Briefcase className="feather" />
               Portfolio
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink className="nav-link" activeClassName="active" to="/search">
               <Search className="feather" />
               Find | Buy Stock
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink
+              className="nav-link"
+              activeClassName="active"
+              to="/insights"
+            >
               <Edit3 className="feather" />
               Insights
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink
+              className="nav-link"
+              activeClassName="active"
+              to="/trending"
+            >
               <TrendingUp className="feather" />
               Hot | Trending
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink
+              className="nav-link"
+              activeClassName="active"
+              to="/precious-metals"
+            >
               <Layers className="feather" />
               Precious Metals
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink className="nav-link" activeClassName="active" to="/about">
               <Info className="feather" />
               About
-            </a>
+            </NavLink>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink
+              className="nav-link"
+              activeClassName="active"
+              to="/settings"
+            >
               <Settings className="feather" />
               Settings
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <NavLink className="nav-link" activeClassName="active" to="/logout">
               <LogOut className="feather" />
               Logout
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>
