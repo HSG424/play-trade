@@ -6,12 +6,12 @@ import PieChart from "./PieChart";
 const Overview = () => {
   return (
     <Fragment>
-      <h3 className="asset-h3">Asset Breakdown</h3>
+      <h3 className="h3-layout">Asset Breakdown</h3>
       <div className="pie-width">
         <PieChart />
       </div>
 
-      <h3 className="asset-h3-lower">Your Assets</h3>
+      <h3 className="h3-layout">Your Assets</h3>
       <div className="table-responsive">
         <table className="table table-striped table-sm">
           <thead>
