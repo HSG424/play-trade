@@ -1,12 +1,15 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import "./AuthForm.scss";
 import AuthContext from "../../store/auth-context";
 import logo from "../../logo.png";
 import useHttp from "../../hooks/use-http";
 import { FIREBASE_URL, FIREBASE_KEY } from "../../config.js";
+import { useHistory } from "react-router-dom";
 
 const AuthForm = () => {
   const authCtx = useContext(AuthContext);
+
+  const history = useHistory();
 
   const [contentIsLogin, setContentIsLogin] = useState(true);
   const [email, setEmail] = useState("");
@@ -26,9 +29,11 @@ const AuthForm = () => {
     setContentIsLogin((prevState) => !prevState);
   };
 
+  useEffect(() => {
+    authCtx.isLoggedIn && history.replace("/");
+  }, [authCtx.isLoggedIn]);
+
   const processAuth = (data) => {
-    console.log(data);
-    console.log(data.idToken);
     authCtx.login(data.idToken);
   };
 
