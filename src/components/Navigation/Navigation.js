@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import AuthContext from "../../store/auth-context";
 import "./Navigation.scss";
 import {
   Home,
@@ -13,6 +15,12 @@ import {
 import { NavLink } from "react-router-dom";
 
 const Navigation = (props) => {
+  const authCtx = useContext(AuthContext);
+
+  const logoutHandler = () => {
+    authCtx.logout();
+  };
+
   return (
     <nav
       id="sidebarMenu"
@@ -96,11 +104,9 @@ const Navigation = (props) => {
               Settings
             </NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" activeClassName="active" to="/logout">
-              <LogOut className="feather" />
-              Logout
-            </NavLink>
+          <li className="nav-item logout" onClick={logoutHandler}>
+            <LogOut className="feather" />
+            Logout
           </li>
         </ul>
       </div>

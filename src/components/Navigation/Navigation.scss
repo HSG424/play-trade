@@ -24,12 +24,13 @@
   }
 }
 
-.sidebar .nav-link {
+.sidebar .nav-link,
+.logout {
   font-weight: 500;
   color: #333;
 }
 
-.sidebar .nav-link .feather {
+.sidebar .feather {
   margin-right: 4px;
   color: #727272;
 }
@@ -39,6 +40,13 @@
 }
 
 .sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
+.sidebar .nav-link.active .feather,
+.logout:hover .feather {
   color: inherit;
+}
+
+.logout {
+  display: block;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
